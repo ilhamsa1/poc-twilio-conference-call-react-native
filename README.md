@@ -4,6 +4,7 @@ example use conference call in react native
 run server 
 ```
  cd server
+ yarn install
  yarn dev
 ```
 
