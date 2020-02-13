@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { SafeAreaView, StyleSheet, StatusBar, View, Text } from 'react-native'
+import {Actions as NavigationActions} from 'react-native-router-flux'
 
 import TwilioVoice from 'react-native-twilio-programmable-voice'
 
@@ -24,7 +25,7 @@ const App = () => {
 
       // const token = new AccessToken(accountSid, clients.sid, clients.secret);
       // console.log(token)
-      const success = await TwilioVoice.initWithToken('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImN0eSI6InR3aWxpby1mcGE7dj0xIn0.eyJqdGkiOiJTS2NkYTE2ODcxNDY1NTBlNDc1NTZjMTk0ZDBjNGE4MTJkLTE1ODE0ODc0NDYiLCJncmFudHMiOnsiaWRlbnRpdHkiOiJ1c2VyIiwidm9pY2UiOnsiaW5jb21pbmciOnsiYWxsb3ciOnRydWV9LCJvdXRnb2luZyI6eyJhcHBsaWNhdGlvbl9zaWQiOiJBUDI4Y2QzNTBhMmRmZDdlNGYwOTMzN2FkMTFjMTcwOTBjIn19fSwiaWF0IjoxNTgxNDg3NDQ2LCJleHAiOjE1ODE0OTEwNDYsImlzcyI6IlNLY2RhMTY4NzE0NjU1MGU0NzU1NmMxOTRkMGM0YTgxMmQiLCJzdWIiOiJBQzJjYzJhYzhmY2FjMmMyY2MzNzNlYzY3ZTFiZGM1MzA5In0.yPb-u7wlPP60nbN4uOeMNntDoc9jjYDzFDMxhuB9vjI')
+      const success = await TwilioVoice.initWithToken('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImN0eSI6InR3aWxpby1mcGE7dj0xIn0.eyJqdGkiOiJTSzU1NDAwMjhjOGVmMjkyNTU0NGZkNmNiMmFhYTZiOWMwLTE1ODE1NjI4MjQiLCJncmFudHMiOnsiaWRlbnRpdHkiOiJ1c2VyIiwidm9pY2UiOnsiaW5jb21pbmciOnsiYWxsb3ciOnRydWV9LCJvdXRnb2luZyI6eyJhcHBsaWNhdGlvbl9zaWQiOiJBUDI4Y2QzNTBhMmRmZDdlNGYwOTMzN2FkMTFjMTcwOTBjIn19fSwiaWF0IjoxNTgxNTYyODI0LCJleHAiOjE1ODE1NjY0MjQsImlzcyI6IlNLNTU0MDAyOGM4ZWYyOTI1NTQ0ZmQ2Y2IyYWFhNmI5YzAiLCJzdWIiOiJBQzJjYzJhYzhmY2FjMmMyY2MzNzNlYzY3ZTFiZGM1MzA5In0.5_2HukmjGUgNKvkZ8eMYYWcdlwzqTeeodfqrX-nug5s')
       // add listeners (flowtype notation)
       TwilioVoice.addEventListener('deviceReady', () => {
         console.log('device ready')
@@ -45,7 +46,7 @@ const App = () => {
         // empty data
       })
       TwilioVoice.addEventListener('connectionDidDisconnect', (data) => {
-        console.log(data)
+        NavigationActions.pop()
       })
       TwilioVoice.addEventListener('callInviteCancelled', (data) => {
         console.log(data)

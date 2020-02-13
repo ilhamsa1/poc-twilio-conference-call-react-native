@@ -32,6 +32,7 @@ export default StyleSheet.create({
   footerContainer: {
     position: 'absolute',
     bottom: 0,
+    marginVertical: Metrics.smallMargin,
     width: '100%',
   },
 })

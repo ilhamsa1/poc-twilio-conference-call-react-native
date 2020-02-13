@@ -38,7 +38,7 @@ const Teleconference = () => {
             onPress={async () => {
               try {
                 console.log('jj')
-                await TwilioVoice.connect({To: 'user'})
+                await TwilioVoice.disconnect()
               } catch (e) {
                 console.log(e)
               }
