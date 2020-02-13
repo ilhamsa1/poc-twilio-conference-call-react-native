@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "415544106859",
+    "firebase_url": "https://poclawkins.firebaseio.com",
+    "project_id": "poclawkins",
+    "storage_bucket": "poclawkins.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415544106859:android:51261b8aea1d97e886b62e",
+        "android_client_info": {
+          "package_name": "com.poctwilioconferencecall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "415544106859-qui92fkukvq5ljcl9039m0d2o08v6r5t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.poctwilioconferencecall",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "415544106859-arj735g2h00e2llmij69mlp9679lk1a8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJOHo6g7hbLEXsQGc5AcnC248HMIdm0Sc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "415544106859-arj735g2h00e2llmij69mlp9679lk1a8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
